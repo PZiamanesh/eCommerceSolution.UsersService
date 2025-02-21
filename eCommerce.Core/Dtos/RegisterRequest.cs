@@ -1,8 +1,9 @@
 ﻿namespace eCommerce.Core.Dtos;
 
-public record RegisterRequest(
-    string? Email,
-    string? Password,
-    string? PersonName,
-    GenderOptions Gender
-    );
+public record RegisterRequest
+{
+    public string? Email { get; init; }
+    public string? Password { get; init; }
+    public string? PersonName { get; init; }
+    public GenderOptions Gender { get; init; }
+}

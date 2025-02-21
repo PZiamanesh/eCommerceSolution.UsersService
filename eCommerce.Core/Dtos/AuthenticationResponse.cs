@@ -1,10 +1,11 @@
 ﻿namespace eCommerce.Core.Dtos;
 
-public record AuthenticationResponse(
-    Guid UserId,
-    string? Email,
-    string? PersonName,
-    GenderOptions? Gender,
-    string? Token,
-    bool Success
-    );
+public record AuthenticationResponse
+{
+    public Guid UserId { get; init; }
+    public string? Email { get; init; }
+    public string? PersonName { get; init; }
+    public GenderOptions? Gender { get; init; }
+    public string? Token { get; init; }
+    public bool Success { get; init; }
+}
