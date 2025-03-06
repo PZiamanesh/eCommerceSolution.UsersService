@@ -9,7 +9,7 @@ namespace eCommerce.Core.Services;
 
 internal class UserService : IUserService
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserRepository userRepository;
     private readonly IMapper mapper;
 
     public UserService(
@@ -17,13 +17,21 @@ internal class UserService : IUserService
         IMapper mapper
         )
     {
-        _userRepository = userRepository;
+        this.userRepository = userRepository;
         this.mapper = mapper;
+    }
+
+    public async Task<UserDto> GetUserByUserID(Guid userId)
+    {
+        var appUser = await userRepository.GetUserByUserID(userId);
+        var uerDto = mapper.Map<UserDto>(appUser);
+
+        return uerDto;
     }
 
     public async Task<AuthenticationResponse?> Login(LoginRequest loginRequest)
     {
-        var appUser = await _userRepository.GetUserByEmailAndPassword(loginRequest.Email, loginRequest.Password);
+        var appUser = await userRepository.GetUserByEmailAndPassword(loginRequest.Email, loginRequest.Password);
 
         if (appUser == null)
         {
@@ -37,7 +45,7 @@ internal class UserService : IUserService
     {
         var newUser = mapper.Map<ApplicationUser>(registerRequest);
 
-        var registredUser = await _userRepository.AddUser(newUser);
+        var registredUser = await userRepository.AddUser(newUser);
 
         if (registredUser == null)
         {

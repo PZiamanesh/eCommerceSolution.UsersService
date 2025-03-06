@@ -14,6 +14,7 @@ builder.Services.AddInfrastructure();
 builder.Services.AddControllers()
     .AddJsonOptions(cnfg =>
     {
+        cnfg.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
         cnfg.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
 

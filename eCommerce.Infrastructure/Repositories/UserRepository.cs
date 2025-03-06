@@ -52,4 +52,20 @@ public class UserRepository : IUserRepository
 
         return user;
     }
+
+    public async Task<ApplicationUser?> GetUserByUserID(Guid? userID)
+    {
+        var query = @"
+            select * from public.""Users"" where ""UserId""=@UserID
+        ";
+
+        var user = await dbContext.DbConnection.QueryFirstAsync<ApplicationUser>(query, new { UserID = userID });
+
+        if (user is null)
+        {
+            return null;
+        }
+
+        return user;
+    }
 }
