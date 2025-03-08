@@ -2,7 +2,7 @@
 
 public record AuthenticationResponse
 {
-    public Guid UserId { get; init; }
+    public Guid UserID { get; init; }
     public string? Email { get; init; }
     public string? PersonName { get; init; }
     public GenderOptions? Gender { get; init; }

@@ -21,9 +21,9 @@ internal class UserService : IUserService
         this.mapper = mapper;
     }
 
-    public async Task<UserDto> GetUserByUserID(Guid userId)
+    public async Task<UserDto> GetUserByUserID(Guid userID)
     {
-        var appUser = await userRepository.GetUserByUserID(userId);
+        var appUser = await userRepository.GetUserByUserID(userID);
         var uerDto = mapper.Map<UserDto>(appUser);
 
         return uerDto;

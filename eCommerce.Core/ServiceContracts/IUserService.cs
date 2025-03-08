@@ -8,5 +8,5 @@ public interface IUserService
 
     Task<AuthenticationResponse?> Register(RegisterRequest registerRequest);
 
-    Task<UserDto> GetUserByUserID(Guid userId);
+    Task<UserDto> GetUserByUserID(Guid userID);
 }

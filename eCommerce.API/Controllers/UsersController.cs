@@ -15,9 +15,9 @@ public class UsersController : ControllerBase
         this.userService = userService;
     }
 
-    [HttpGet("{userId}")]
-    public async Task<ActionResult<UserDto>> GetUserByUserId(Guid userId)
+    [HttpGet("{userID}")]
+    public async Task<ActionResult<UserDto>> GetUserByUserId(Guid userID)
     {
-        return await userService.GetUserByUserID(userId);
+        return await userService.GetUserByUserID(userID);
     }
 }

@@ -15,17 +15,17 @@ public class UserRepository : IUserRepository
 
     public async Task<ApplicationUser> AddUser(ApplicationUser user)
     {
-        user.UserId = Guid.NewGuid();
+        user.UserID = Guid.NewGuid();
         string query = @"
         INSERT INTO public.""Users"" (
-            ""UserId"",
+            ""UserID"",
             ""Email"",
             ""Password"",
             ""PersonName"",
             ""Gender""
         )
         VALUES (
-            @UserId,
+            @UserID,
             @Email,
             @Password,
             @PersonName,
@@ -56,7 +56,7 @@ public class UserRepository : IUserRepository
     public async Task<ApplicationUser?> GetUserByUserID(Guid? userID)
     {
         var query = @"
-            select * from public.""Users"" where ""UserId""=@UserID
+            select * from public.""Users"" where ""UserID""=@UserID
         ";
 
         var user = await dbContext.DbConnection.QueryFirstAsync<ApplicationUser>(query, new { UserID = userID });
