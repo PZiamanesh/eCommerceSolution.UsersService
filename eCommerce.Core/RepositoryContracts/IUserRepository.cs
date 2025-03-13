@@ -1,6 +1,6 @@
-﻿using eCommerce.Core.Entities;
+﻿using UsersMicroService.Core.Entities;
 
-namespace eCommerce.Core.RepositoryContracts;
+namespace UsersMicroService.Core.RepositoryContracts;
 
 public interface IUserRepository
 {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.API", "eCommerce.API\eCommerce.API.csproj", "{FBBCAE22-9A09-44EC-AC96-68A54DD630D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsersMicroService.API", "eCommerce.API\UsersMicroService.API.csproj", "{FBBCAE22-9A09-44EC-AC96-68A54DD630D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Infrastructure", "eCommerce.Infrastructure\eCommerce.Infrastructure.csproj", "{3F5D02C3-89A1-4C68-BD10-C3C3CC3570EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsersMicroService.Infrastructure", "eCommerce.Infrastructure\UsersMicroService.Infrastructure.csproj", "{3F5D02C3-89A1-4C68-BD10-C3C3CC3570EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Core", "eCommerce.Core\eCommerce.Core.csproj", "{570420E4-553F-4725-9DB6-5E10C0579B6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsersMicroService.Core", "eCommerce.Core\UsersMicroService.Core.csproj", "{570420E4-553F-4725-9DB6-5E10C0579B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

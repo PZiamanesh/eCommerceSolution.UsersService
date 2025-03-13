@@ -1,4 +1,4 @@
-﻿namespace eCommerce.Core.Dtos;
+﻿namespace UsersMicroService.Core.Dtos;
 
 public record RegisterRequest
 {

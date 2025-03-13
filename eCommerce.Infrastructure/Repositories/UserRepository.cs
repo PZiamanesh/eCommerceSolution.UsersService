@@ -1,8 +1,8 @@
 ﻿using Dapper;
-using eCommerce.Core.Entities;
-using eCommerce.Core.RepositoryContracts;
+using UsersMicroService.Core.Entities;
+using UsersMicroService.Core.RepositoryContracts;
 
-namespace eCommerce.Infrastructure.Repositories;
+namespace UsersMicroService.Infrastructure.Repositories;
 
 public class UserRepository : IUserRepository
 {
@@ -43,7 +43,7 @@ public class UserRepository : IUserRepository
         select * from public.""Users"" where ""Email""=@Email and ""Password""=@Password
         ";
 
-        var user = await dbContext.DbConnection.QueryFirstAsync<ApplicationUser>(query, new {Email = email, Password = password});
+        var user = await dbContext.DbConnection.QueryFirstAsync<ApplicationUser>(query, new { Email = email, Password = password });
 
         if (user is null)
         {

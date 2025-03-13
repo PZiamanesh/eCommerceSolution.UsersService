@@ -2,7 +2,7 @@
 using Npgsql;
 using System.Data;
 
-namespace eCommerce.Infrastructure;
+namespace UsersMicroService.Infrastructure;
 
 public class DapperDbContext
 {

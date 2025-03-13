@@ -1,8 +1,8 @@
-using eCommerce.API.Middlewares;
-using eCommerce.Core;
-using eCommerce.Infrastructure;
+using UsersMicroService.Core;
 using System.Text.Json.Serialization;
 using FluentValidation.AspNetCore;
+using UsersMicroService.API.Middlewares;
+using UsersMicroService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
-﻿using eCommerce.Core.Dtos;
-using FluentValidation;
+﻿using FluentValidation;
+using UsersMicroService.Core.Dtos;
 
-namespace eCommerce.Core.Validators;
+namespace UsersMicroService.Core.Validators;
 
 public class LoginRequestValidator : AbstractValidator<LoginRequest>
 {

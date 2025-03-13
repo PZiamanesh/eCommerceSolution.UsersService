@@ -1,8 +1,8 @@
-﻿using eCommerce.Core.Dtos;
-using eCommerce.Core.ServiceContracts;
+﻿using UsersMicroService.Core.Dtos;
+using UsersMicroService.Core.ServiceContracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eCommerce.API.Controllers;
+namespace UsersMicroService.API.Controllers;
 
 [ApiController]
 [Route("api/users/")]

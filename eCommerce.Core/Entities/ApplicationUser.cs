@@ -1,6 +1,6 @@
-﻿using eCommerce.Core.Dtos;
+﻿using UsersMicroService.Core.Dtos;
 
-namespace eCommerce.Core.Entities;
+namespace UsersMicroService.Core.Entities;
 
 public class ApplicationUser
 {

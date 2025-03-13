@@ -1,9 +1,9 @@
-﻿using eCommerce.Core.ServiceContracts;
-using eCommerce.Core.Services;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using UsersMicroService.Core.ServiceContracts;
+using UsersMicroService.Core.Services;
 
-namespace eCommerce.Core;
+namespace UsersMicroService.Core;
 
 public static class CoreConfigs
 {

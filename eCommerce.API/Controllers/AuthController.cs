@@ -1,11 +1,8 @@
-﻿using eCommerce.Core.Dtos;
-using eCommerce.Core.ServiceContracts;
-using Microsoft.AspNetCore.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using LoginRequest = eCommerce.Core.Dtos.LoginRequest;
-using RegisterRequest = eCommerce.Core.Dtos.RegisterRequest;
+﻿using Microsoft.AspNetCore.Mvc;
+using UsersMicroService.Core.Dtos;
+using UsersMicroService.Core.ServiceContracts;
 
-namespace eCommerce.API.Controllers;
+namespace UsersMicroService.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -19,14 +16,14 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(RegisterRequest registerRequest)
+    public async Task<IActionResult> Register(RegisterRequest registerRequestDto)
     {
-        if (registerRequest == null)
+        if (registerRequestDto == null)
         {
             return BadRequest("Invalid registration data");
         }
 
-        var authResponse = await _userService.Register(registerRequest);
+        var authResponse = await _userService.Register(registerRequestDto);
 
         if (authResponse == null || authResponse.Success == false)
         {

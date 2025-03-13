@@ -1,8 +1,8 @@
-﻿using eCommerce.Core.RepositoryContracts;
-using eCommerce.Infrastructure.Repositories;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using UsersMicroService.Core.RepositoryContracts;
+using UsersMicroService.Infrastructure.Repositories;
 
-namespace eCommerce.Infrastructure;
+namespace UsersMicroService.Infrastructure;
 
 public static class InfrastructureConfigs
 {

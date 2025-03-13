@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eCommerce.Core\eCommerce.Core.csproj" />
-    <ProjectReference Include="..\eCommerce.Infrastructure\eCommerce.Infrastructure.csproj" />
+    <ProjectReference Include="..\eCommerce.Core\UsersMicroService.Core.csproj" />
+    <ProjectReference Include="..\eCommerce.Infrastructure\UsersMicroService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

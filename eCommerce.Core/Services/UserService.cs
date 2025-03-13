@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using eCommerce.Core.Dtos;
-using eCommerce.Core.Entities;
-using eCommerce.Core.RepositoryContracts;
-using eCommerce.Core.ServiceContracts;
 using Mapster;
+using UsersMicroService.Core.Dtos;
+using UsersMicroService.Core.Entities;
+using UsersMicroService.Core.RepositoryContracts;
+using UsersMicroService.Core.ServiceContracts;
 
-namespace eCommerce.Core.Services;
+namespace UsersMicroService.Core.Services;
 
 internal class UserService : IUserService
 {

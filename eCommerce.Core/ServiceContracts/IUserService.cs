@@ -1,6 +1,6 @@
-﻿using eCommerce.Core.Dtos;
+﻿using UsersMicroService.Core.Dtos;
 
-namespace eCommerce.Core.ServiceContracts;
+namespace UsersMicroService.Core.ServiceContracts;
 
 public interface IUserService
 {

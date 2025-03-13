@@ -1,4 +1,4 @@
-﻿namespace eCommerce.API.Middlewares;
+﻿namespace UsersMicroService.API.Middlewares;
 
 public class ExceptionHandlingMiddleware
 {
@@ -14,7 +14,7 @@ public class ExceptionHandlingMiddleware
     }
 
     public async Task Invoke(HttpContext httpContext)
-    
+
     {
         try
         {
@@ -31,7 +31,7 @@ public class ExceptionHandlingMiddleware
 
             httpContext.Response.StatusCode = 500;
 
-            await httpContext.Response.WriteAsJsonAsync(new {Message = ex.Message, Type = ex.GetType().ToString()});
+            await httpContext.Response.WriteAsJsonAsync(new { ex.Message, Type = ex.GetType().ToString() });
         }
     }
 }
