@@ -9,15 +9,17 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["eCommerce.API/eCommerce.API.csproj", "eCommerce.API/"]
-RUN dotnet restore "./eCommerce.API/./eCommerce.API.csproj"
+COPY ["eCommerce.API/UsersMicroService.API.csproj", "eCommerce.API/"]
+COPY ["eCommerce.Core/UsersMicroService.Core.csproj", "eCommerce.Core/"]
+COPY ["eCommerce.Infrastructure/UsersMicroService.Infrastructure.csproj", "eCommerce.Infrastructure/"]
+RUN dotnet restore "./eCommerce.API/./UsersMicroService.API.csproj"
 COPY . .
 WORKDIR "/src/eCommerce.API"
-RUN dotnet build "./eCommerce.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./UsersMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./eCommerce.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./UsersMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
@@ -27,4 +29,4 @@ ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=admin
 ENV POSTGRES_DATABASE=eCommerceUsers
 ENV POSTGRES_PORT=5433
-ENTRYPOINT ["dotnet", "eCommerce.API.dll"]
+ENTRYPOINT ["dotnet", "UsersMicroService.API.dll"]
